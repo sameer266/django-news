@@ -1,0 +1,22 @@
+{% include 'navbar.html' %}
+<html>
+    <body>
+        <h1  class="category-h1" style="text-align: center;">Politics</h1>
+        <div class="container">
+            <div class="rows">
+                {% for i in news_data %}
+                <div class="col-md-6 col column ">
+                    {% if i.img %}
+                    <a href="/politics/{{i.news_slug}}"><img src="{{i.img.url}}" /></a>
+                    {% endif %}
+                    <a href="/politics/{{i.news_slug}}"><h3 class="justify-text">{{i.title}}</h3></a>
+                    <p class="justify-text">{{i.content | truncatewords:30 }}</p>
+                    <i>{{i.pub_date | date:"F j,Y"}}</i>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% include 'footer.html'%}
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{% include 'navbar.html'%}
+
+   
+<html>
+
+<body>
+
+
+    <div class="container-md home-container ">
+        <div class="row">
+
+            {% for i in articles %}
+            <div class="col-md-4 column mb-4 ">
+                {% if i.img %}
+                <a href="{% url 'newshomedetail' i.news_slug %}"><img src="{{i.img.url}}" /></a>
+               {% endif %}
+                <a href="{% url 'newshomedetail' i.news_slug %}"><h3 class="justify-text">{{ i.title }}</h3></a>
+                <p class="justify-text">{{ i.content | truncatewords:30 }}...</p>
+                <i>{{i.pub_date|date:"F j,Y"}}</i>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'footer.html'%}
+    
+</body>
+</html>

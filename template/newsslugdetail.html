@@ -1,0 +1,21 @@
+{% include 'navbar.html'%}
+<html>
+    <body>
+        <div class="container">
+            <div class="row">
+                {% for i in news_slug %}
+                <div class="col-12 column" style="text-align: center;">
+                    {% if i.img %}
+                    <img src="{{i.img.url}}">
+                    {% endif %}
+                    
+                    <h3>{{i.title}}</h3>
+                    <p>{{i.content}}</p>
+                    <i>{{i.pub_date|date:"F j,Y"}}</i>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% include 'footer.html'%}
+    </body>
+</html>

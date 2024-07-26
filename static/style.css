@@ -1,0 +1,243 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+ 
+}
+
+
+
+.navbar .brand-title{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+
+}
+
+
+.navbar-nav .nav-link.active {
+  font-family:'Times New Roman', Times, serif;
+
+
+}
+
+.navbar a:hover{
+  color: black !important;
+}
+
+
+
+.navbar{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.333);
+  margin-bottom: 150px;
+  transition: 0.5s;
+
+  background-color: rgba(21, 20, 20, 0.978);
+}
+.navbar:hover{
+background-color: rgb(106, 104, 104);
+  
+}
+
+
+ 
+
+
+.column {
+  margin-bottom: 50px ;
+  border-right: 1px solid rgb(162, 162, 162);
+  overflow: auto;
+
+  border-bottom: 1px solid rgb(194, 190, 190); /* Changed to visible color */
+  padding: 5px; /* Ensure content doesn't overlap with border */
+}
+
+.column a {
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+
+    
+ @media (max-width: 992px) {
+      .column {
+          border-right: none;
+      }
+  }
+
+
+ 
+
+  
+
+  /* ----text-justify and font-family */
+  h3.justify-text {
+    text-align:center;
+ 
+  }
+  h3.justify-text:hover{
+    color: rgb(246, 16, 16);
+  }
+
+  .column h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .column i{
+    color: gray;
+    font-size: 12px;
+  }
+
+  .category-h1{
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+  }
+  
+  p.justify-text {
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
+  /* --------time and weather------------ */
+
+  .container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.time-weather{
+    width:90%;
+    margin-top: 60px;
+    margin-bottom: 50px;
+   
+    border-bottom: 2px solid rgb(234, 37, 37);
+    font-size: 13px;
+    color: rgb(123, 123, 123);
+
+}
+
+.row {
+    width: 100%;
+}
+
+.column-weather,.column-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+   
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.303);
+    border-radius:15%;
+}
+.weather-details a{
+    text-decoration: none;
+   color: rgb(123, 123, 123); 
+}
+.weather-details a:hover{
+    color:rgb(192, 36, 36);
+
+}
+
+.time {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* -----Form------- */
+.form-login ,.form-register{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 20px;
+  
+
+ 
+ 
+}
+.form-login form,.form-register form{
+
+  margin: 15px 80px 80px 80px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: white;
+  transition: 0.4s;
+  border: 1px solid gray;
+
+ 
+}
+.form-login button,.form-register button{
+  color: rgb(234, 234, 234);
+  background-color: rgb(0, 0, 0);
+  width: 85px;
+  border-radius: 8px;
+  height: 35px;
+  border: none;
+  transition: 0.6s;
+
+}
+
+.form-login input,.form-register input{
+  margin: 15px;
+  border: none;         /* Remove all borders */
+  border-bottom: 2px solid #000; /* Add a bottom border */
+        /* Optional: Add padding */
+  outline: none;
+ 
+}
+
+
+.form-register form:hover,.form-login form:hover{
+  box-shadow: 0px 0px 12px 1px rgb(137, 137, 137);
+
+ 
+}
+.form-login button:hover,.form-register button:hover{
+  color: rgb(255, 255, 255);
+ 
+  background-color:rgb(231, 0, 0);
+}
+
+
+
+/* -----all images----- */
+
+/* Style images within the column */
+
+ 
+  .column img {
+ 
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.303); /* Optional: Add a subtle shadow */
+    margin-bottom: 1rem; /* Space below each image */
+    margin-top: 10px;
+    transform: scale(1)
+  
+  }
+  
+  /* Optional: Add a hover effect */
+  .column img:hover {
+    opacity: 0.8; /* Slightly fade the image on hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    
+  }
+  

@@ -1,0 +1,31 @@
+{% include 'navbar.html' %}
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+
+        <div class="container-md form-register">
+            <div class="row text-center">
+                <div class=" col">
+
+        <h1>Sign Up</h1>
+        {% if error%}
+        <p>{{error}}</p>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <label for="username:">Username:</label>
+            <input type="text" placeholder="please enter email" name="username" id="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="please enter password" id="password"><br>
+            <label for="confirm">Confirm:</label>
+            <input type="password" id="password" name="confirm_password"><br>
+            <button type="submit">Register</button>
+        </form>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
