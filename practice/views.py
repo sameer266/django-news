@@ -58,7 +58,7 @@ def register_view(request):
             except:
                 return render(request,'register.html',{'error':'USername already exists'})
         else:
-            return render(request,'register.html',{'error':'Password doesnot match'})
+            return render(request,'authentication/register.html',{'error':'Password doesnot match'})
     return render(request,'authentication/register.html')
             
 # ------login----
@@ -72,7 +72,7 @@ def login_view(request):
             login(request,user)
             return redirect('login_home')
         else:
-            return render(request,'login.html',{'error':'Invalid credentials'})
+            return render(request,'authentication/login.html',{'error':'Invalid credentials'})
     return render(request,'authentication/login.html')
             
 # --logout-----
