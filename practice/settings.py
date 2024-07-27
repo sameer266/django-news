@@ -125,10 +125,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, “staticfiles_build”, “static”)
-STATIC_URL = “/staticfiles/” STATICFILES_DIRS = [os.path.join(BASE_DIR, “static”)]
+
+# Define BASE_DIR as the directory containing manage.py
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Directory where static files will be collected for deployment
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")
+
+# URL prefix for serving static files
+STATIC_URL = "/staticfiles/"
+
+# Additional locations to look for static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
