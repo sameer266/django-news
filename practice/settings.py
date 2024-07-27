@@ -127,17 +127,12 @@ USE_TZ = True
 
 import os
 
-# Define BASE_DIR as the directory containing manage.py
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Directory where static files will be collected for deployment
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")
 
 # URL prefix for serving static files
-STATIC_URL = "/staticfiles/"
+STATIC_URL = "static/"
 
-# Additional locations to look for static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
