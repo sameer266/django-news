@@ -80,7 +80,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         const apiKey = 'f8d97d1e73ba182b16896720d3548cec';
         const city = 'Kathmandu';
-        const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
         // Update current time and date
         function updateTime() {
@@ -109,7 +109,7 @@
             .then(data => {
                 console.log(data); // Log the data for debugging
                 if (data.cod === 200) {
-                    const weatherIcon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                    const weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
                     document.getElementById('weather-icon').src = weatherIcon;
                     document.getElementById('city-name').innerText = `City: ${data.name}`;
                     document.getElementById('temperature').innerText = `Temperature: ${data.main.temp} °C`;
