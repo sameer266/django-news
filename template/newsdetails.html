@@ -1,33 +1,32 @@
-{% include 'navbar.html'%}
-<html>
-    <body>
-        <div class="container">
-            <div class="row">
-                {% if search_data %}
-                    {% for i in search_data %}
-                        <div class="col-12 mb-4 column"> 
-                            {% if i.img %}
-                                <a href="{% url 'newsslugdetail' i.news_slug %}">
-                                    <img src="{{ i.img.url }}" alt="{{ i.title }}"/>
-                                </a>
-                            {% endif %}        
-                            <a href="{% url 'newsslugdetail' i.news_slug %}" class="text-decoration-none">
-                                <h3 class="justify-text">{{ i.title }}</h3>
-                            </a>
-                            <p>{{ i.content|truncatewords:30 }}...</p>
-                            <p>{{ i.pub_date|date:"F j, Y" }}</p>
-                        </div>
-                    {% endfor %}
-                {% else %}
-                    <div class="col-12">
-                        <h3>No results found for "{{ query }}".</h3>
-                        
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-        
-        {% include 'footer.html'%}    
-    </body>
+{% include 'navbar.html' %}
 
+<html>
+<body>
+    <div class="container">
+        <div class="row">
+            {% if search_data %}
+                {% for i in search_data %}
+                    <div class="col-12 mb-4 column"> 
+                        {% if i.img %}
+                            <a href="{% url 'newsslugdetail' i.news_slug %}">
+                                <img src="{{ i.img.url }}" alt="{{ i.title }}"/>
+                            </a>
+                        {% endif %}        
+                        <a href="{% url 'newsslugdetail' i.news_slug %}" class="text-decoration-none">
+                            <h3 class="justify-text">{{ i.title }}</h3>
+                        </a>
+                        <p>{{ i.content|truncatewords:30 }}...</p>
+                        <p>{{ i.pub_date|date:"F j, Y" }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <h3>No results found for "{{ query }}".</h3>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'footer.html' %}    
+</body>
 </html>

@@ -20,17 +20,18 @@ def home(request):
 # -----NewsDetails--------
 def newsdetail(request):
     query = request.GET.get('q')
-    print(f"Search query: {query}")  # Print the search query to the console
+    print(f"Search query: {query}")  # Debug the search query
 
     if query:
         news_data = Article.objects.filter(
             Q(title__icontains=query) | Q(content__icontains=query))
-        print(f"Search results: {news_data}")  # Print the search results
+        print(f"Search results: {news_data}")  # Debug the search results
     else:
         news_data = Article.objects.all()
-        
+    
     context = {'search_data': news_data, 'query': query}
     return render(request, 'newsdetails.html', context)
+
 
  
 # ---slugnewsDetails------

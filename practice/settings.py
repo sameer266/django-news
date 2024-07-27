@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'practice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',  # Replace with your PostgreSQL database name
-        'USER': 'postgres',  # Replace with your PostgreSQL username
-        'PASSWORD': 'LXFEwbmnwRpTbsDUVKfDqBobRBRFluRb',  # Replace with your PostgreSQL password
-        'HOST': 'monorail.proxy.rlwy.net',  # Set to the hostname where your PostgreSQL server is running
-        'PORT': '32272',  # The default PostgreSQL port
+        'NAME': 'verceldb',  # Replace with your PostgreSQL database name
+        'USER': 'default',  # Replace with your PostgreSQL username
+        'PASSWORD': 'fx1Gv5WwOKum',  # Replace with your PostgreSQL password
+        'HOST': 'ep-mute-firefly-a4myqmyo-pooler.us-east-1.aws.neon.tech',  # Set to the hostname where your PostgreSQL server is running
+        'PORT': '5432',  # The default PostgreSQL port
     }
 }
 
