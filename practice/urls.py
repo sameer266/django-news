@@ -7,8 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('/<news_slug>/', views.newsslugdetail, name='newshomedetail'), 
-    path('', include('news.urls')),
+    path('/news_slug>/', views.newsslugdetail, name='newshomedetail'), 
+    path('news/', include('news.urls')),
     
     path('newsdetail/', views.newsdetail, name="newsdetail"),
     path('newsdetail/<news_slug>/', views.newsslugdetail, name="newsslugdetail"),
