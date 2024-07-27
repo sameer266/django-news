@@ -121,16 +121,15 @@ USE_TZ = True
 
 
 import os
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(SITE_ROOT, 'static/')]
-
-# Directory to collect static files for deployment
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]  # Point to the root static directory
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory for collected static files
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
