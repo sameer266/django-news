@@ -1,12 +1,41 @@
-<!DOCTYPE html>
+{% include 'navbar.html'%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+.login-home{
+    background-color: rgba(0, 0, 0, 0.652);
+    height: 150px;
+    font-family:Georgia, Times, serif;
+    max-width: 600px;
+
+}
+.login-home a{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color:  white;
+    padding: 5px;
+    border-radius: 8px;
+}
+.login-home a:hover{
+    background-color: rgba(0, 0, 0, 0.599);
+}
+.login-home img{
+    width: 45%;
+    border-radius: 50%;
+    border: 6px solid rgb(95, 187, 223);
+}
+
+    </style>
 </head>
 <body>
-    <h1> After Login page</h1>
+    <div class="container-md login-home">
+        <div class=" row text-center">
+            <div class="col">
+                <img src="https://png.pngtree.com/png-vector/20220807/ourmid/pngtree-man-avatar-wearing-gray-suit-png-image_6102786.png"alt="profile"/>
+    <h1> Hello {{request.user}}</h1>
     <a href="{% url 'logout' %}">Logout</a>
+</div>
+</div>
+</div>
 </body>
 </html>
